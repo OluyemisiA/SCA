@@ -1,0 +1,629 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+p {
+  font-family: "Comfortaa";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.75rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* Background */
+  .daisies-bg{
+      background: linear-gradient(
+        rgba(173, 167, 201, 1) 0 10%,
+        rgba(173, 167, 201, 0.7)
+      ),
+      url("../assets/daisies.gif");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 200px;
+  }
+
+  .superhero-bg {
+    background: linear-gradient(
+        rgba(173, 167, 201, 1) 0 10%,
+        rgba(173, 167, 201, 0.7)
+      ),
+      url("../assets/wonderwoman.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 150px;
+  }
+
+/* Container */
+.nav-container {
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.project-inner {
+  min-height: 400px;
+  height: auto;
+}
+
+.container {
+  padding: 2% 5% 5%;
+}
+
+.container-fluid {
+  padding: 8% 20%;
+}
+
+/* Heading */
+.section-heading {
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+/* Utilities */
+.bg-primary {
+  background-color: #ada7c9;
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: #90a8c3;
+  color: #fff;
+}
+
+.box {
+  padding: 3%;
+  width: 20%;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #e1e4e8;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  width: 30%;
+}
+
+.btn:hover {
+  background-color: #000000bf;
+  box-shadow: 0 0 0 1px #000000bf;
+  transition: 0.2s ease-in-out;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .project-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: fit-content(300px) fit-content(100px);
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: 300px;
+  max-width: 100%;
+}
+
+.carousel-item > div {
+  height: auto;
+  min-height: 300px;
+  max-width: 100%;
+  padding: 30px 10%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4,
+#carousel-5:checked ~ .control-5,
+#carousel-6:checked ~ .control-6 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #aaaaaa;
+}
+
+#carousel-1:checked
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-2:checked
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-3:checked
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet,
+#carousel-4:checked
+  ~ .control-4
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-5:checked
+  ~ .control-5
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-6:checked
+  ~ .control-6
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
+  color: #428bca;
+}
+
+#about .carousel-item {
+  min-height: 400px;
+}
+
+#about .carousel-indicators {
+  bottom: 10%;
+}
+
+#about .carousel::before,
+#about .carousel::after {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  height: 80px;
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  transform: skewY(-1deg);
+  -webkit-transform: skewY(-1deg);
+  -moz-transform: skewY(-1deg);
+  -ms-transform: skewY(-1deg);
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.title {
+  color: #727272;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar {
+  height: 70px;
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem;
+  padding: 0.3125rem 0;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+  margin: 0 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid #fff;
+}
+
+input[type="checkbox"],
+.menu-toggle-label {
+  display: none;
+}
+
+/* Offerring */
+.box img {
+  height: 50px;
+  width: 50px;
+}
+
+#tech .box img {
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.first {
+  background-color: #4b5040;
+}
+
+.second {
+  background-color: #c87466;
+}
+
+.third {
+  background-color: #27608e;
+}
+
+.fourth {
+  background-color: #f7f7f6;
+}
+
+/* CTA */
+.newsletter .grid {
+  grid-template-columns: 45% 45%;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.newsletter {
+  position: relative;
+}
+
+.newsletter p {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  color: #333;
+  margin: 10px;
+  padding: 20px;
+}
+
+.newsletter-form {
+  position: relative;
+  top: 50px;
+  height: 400px;
+  width: 450px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+.newsletter-form h2 {
+  color: #737171;
+}
+
+.newsletter .form-control {
+  margin: 30px 0;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 3px;
+  width: 100%;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+}
+
+.newsletter .btn {
+  border: 1px solid #e1e1e1;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+}
+
+.newsletter .btn:hover {
+  border: 1px solid transparent;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.newsletter::before,
+.newsletter::after {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  height: 80px;
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+}
+
+/* Contact */
+.message {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /* Utilities */
+  .box {
+    width: 32%;
+  }
+
+  .newsletter .grid {
+    grid-template-columns: 45% 55%;
+    gap: 30px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  /* Navigation bar */
+  .navbar {
+    position: relative;
+  }
+
+  nav {
+    background-color: #ada7c9;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    opacity: 0.9;
+    z-index: 10;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-item {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  .menu-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .menu-toggle:focus ~ .menu-toggle-label {
+    outline: 3px solid rgba(lightblue, 0.75);
+  }
+
+  .menu-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-toggle-label span,
+  .menu-toggle-label span::before,
+  .menu-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .menu-toggle-label span::before,
+  .menu-toggle-label span::after {
+    content: "";
+    position: absolute;
+  }
+
+  .menu-toggle-label span::before {
+    bottom: 7px;
+  }
+
+  .menu-toggle-label span::after {
+    top: 7px;
+  }
+
+  .menu-toggle:checked ~ nav {
+    transform: scale(1, 1);
+  }
+
+  .menu-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .box {
+    width: 100%;
+  }
+
+  .carousel .project-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content(300px) fit-content(100px);
+    column-gap: 2rem;
+    align-items: center;
+  }
+
+  .newsletter .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .newsletter-form {
+    top: 15px;
+  }
+
+  .carousel-item img {
+    height: auto;
+  }
+}
