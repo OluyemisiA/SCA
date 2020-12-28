@@ -288,6 +288,10 @@ p {
   -ms-transform: skewY(-1deg);
 }
 
+#about a{
+    text-decoration: none;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
