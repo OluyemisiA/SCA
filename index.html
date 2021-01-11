@@ -4,278 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Landing Page</title>
-
+    <title>LOREMI DEO</title>
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
 </head>
 
 <body>
-    <section class="bg-primary">
-        <div class="navbar">
-            <div class="nav-container flex">
-                <!-- Navigation bar Logo -->
-                <a href="#" class="navbar-brand">D</a>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <nav>
-                    <!-- Navigation Links -->
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">
-                                About
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#projects" class="nav-link">
-                                Projects
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services" class="nav-link">
-                                Services
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <label for="menu-toggle" class="menu-toggle-label">
-                    <span></span>
-                </label>
-            </div>
-        </div>
+    <div class="flex">
+        <div class="contact-form w-50 w-100">
+            <h1>Let's work together</h1>
+            <p>Send us a message using the form, we'd love to hear from you and know how we can help you.</p>
+            <form action="/" method="get">
 
-        <!-- About Me -->
-        <div id="about">
-            <div class="carousel">
-                <div class="carousel-inner about-inner">
-                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
-                        hidden="" checked="checked" />
-                    <div class="carousel-item daisies-bg flex">
-                        <div>
-                            <h2 class="section-heading text-white">About Me</h2>
-                            <p>Hi, I'm Adebola,</br> A superhero by day and a programmer by night</p>
-                        </div>
+                <div class="flex">
+                    <div class="form-control pr-15 w-50 w-100">
+                        <label for="firstName">First name</label>
+                        <input type="text" name="firstName" id="firstName" autocomplete="false" autocapitalize="false" required>
                     </div>
-                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
-                        hidden="" />
-                    <div class="carousel-item superhero-bg flex">
-                        <div>
-                            <p>When I'm not saving the day or coding,
-                                </br> I love to sleep, read,
-                                </br> and hang out with loved ones.
-                            </p>
-                        </div>
+
+                    <div class="form-control pl-15 w-50 w-100">
+                        <label for="lastName">Last name</label>
+                        <input type="text" name="lastName" id="lastName" autocomplete="false" autocapitalize="false" required>
                     </div>
-                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
-                        hidden="" />
-                    <div class="carousel-item daisies-bg flex">
-                        <div>
-                            <p>I'm looking to work with amazing people on awesome projects. </br>let's collaborate</p>
-                            <button class="btn mt-3"> <a href="#contact">
-                                    Let's talk
-                                </a>
-                            </button>
-                        </div>
-                    </div>
-                    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-                    <label for="carousel-2" class="carousel-control next control-1">›</label>
-                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-                    <label for="carousel-3" class="carousel-control next control-2">›</label>
-                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-                    <label for="carousel-1" class="carousel-control next control-3">›</label>
-                    <ol class="carousel-indicators">
-                        <li>
-                            <label for="carousel-1" class="carousel-bullet">•</label>
-                        </li>
-                        <li>
-                            <label for="carousel-2" class="carousel-bullet">•</label>
-                        </li>
-                        <li>
-                            <label for="carousel-3" class="carousel-bullet">•</label>
-                        </li>
-                    </ol>
                 </div>
-            </div>
-        </div>
-    </section>
 
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="false" autocapitalize="false" required>
+                </div>
 
-    <!-- Services-->
-    <section class="white-section" id="services">
-        <div class="container">
-            <h2 class="section-heading">Services</h2>
-            <div class="flex">
-                <div class="box">
-                    <img src="assets/web-design.svg" alt="Web-dev">
-                    <h3 class="title"> Web Development</h3>
-                    <p class="mt-1">I create responsive websites</p>
+                <div class="form-control">
+                    <label for="company">Company</label>
+                    <input type="text" name="companyName" id="company" autocomplete="false" autocapitalize="false" required>
                 </div>
-                <div class="box">
-                    <img src="assets/ui-design.svg" alt="ui-design">
-                    <h3 class="title"> UI/UX Design</h3>
-                    <p class="mt-1">I design beautiful, modern, and user friendly interface</p>
-                </div>
-                <div class="box">
-                    <img src="assets/mobile-development.svg" alt="iso-dev">
-                    <h3 class="title"> Mobile Development</h3>
-                    <p class="mt-1">I create functional and sophisticated mobile applications</p>
-                </div>
-                <div class="box">
-                    <img src="assets/ecommerce.svg" alt="e-commerce">
-                    <h3 class="title"> E-Commerce</h3>
-                    <p class="mt-1">Drive business and sales with e-commerce using Google analytics</p>
-                </div>
-                <div class="box">
-                    <img src="assets/seo-tag.svg" alt="seo">
-                    <h3 class="title"> SEO</h3>
-                    <p class="mt-1">Make it easy for properstive clients to find your business</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="bg-secondary newsletter ">
-        <div class=" container grid">
-            <div class="text-left">
-                <h2 class="section-heading">Join My Mailing List</h2>
-                <p>
-                    Every week I demo a new project and
-                    </br>give tips to make you a better programmer.
-                </p>
-            </div>
-            <div class="newsletter-form card">
-                <form>
-                    <h2 class="section-heading">Sign Up</h2>
+                <div class="form-control">
+                    <label class="flex" for="phone">
+                        <span>Phone</span> 
+                        <span class="muted">Optional</span>
+                    </label>
+                    <input type="text" name="phoneNumber" id="phone" autocomplete="false" autocapitalize="false">
+                </div>
+
+                <div class="form-control">
+                    <label class="flex" for="message">
+                        <span>How can we help you?</span> 
+                        <span class="muted">Max. 500 characters</span>
+                    </label>
+                    <textarea name="msg" id="message" rows="6" required maxlength="500"></textarea>
+                </div>
+
+                <div class="budget">
+                    <label>Expected budget</label>
                     <div class="form-control">
-                        <input type="text" placeholder=" Name" autocapitalize="false" autocomplete="false">
+                        <input type="radio" name="budget" id="budget">
+                        <label for="budget">Less than &dollar;25K</label>
                     </div>
+
                     <div class="form-control">
-                        <input type="email" placeholder=" Email" autocapitalize="false" autocomplete="false">
+                        <input type="radio" name="budget" id="budget">
+                        <label for="budget">&dollar;25K - &dollar;50K </label>
                     </div>
-                    <button type="button" class="btn"> Send</button>
-                </form>
-            </div>
-        </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section class="white-scetion" id="projects">
-        <div class="container">
-            <h2 class="section-heading">Projects</h2>
-            <div class="carousel mt-3">
-                <div class="carousel-inner project-inner">
-                    <input class="carousel-open" type="radio" id="carousel-4" name="carousel2" aria-hidden="true"
-                        hidden="" checked="checked" />
-                    <div class="carousel-item">
-                        <div class="project-grid">
-                            <img src="assets/simongame.png" alt="simon-game">
-                            <div class="text-left">
-                                <h3 class="title"> Simon Game</h3>
-                                <p class="description">I created a web version of the popular 70's game.
-                                    Where players are required to repeat a sequence. It's super fun I promise and you
-                                    can play it.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="form-control">
+                        <input type="radio" name="budget" id="budget">
+                        <label for="budget">&dollar;50K - &dollar;100K</label>
                     </div>
-                    <input class="carousel-open" type="radio" id="carousel-5" name="carousel2" aria-hidden="true"
-                        hidden="" />
-                    <div class="carousel-item">
-                        <div class="project-grid">
-                            <img src="assets/single-price-grid-component.png" alt="single-price-grid">
-                            <div class="text-left">
-                                <h3 class="title"> Single Price Grid Component</h3>
-                                <p class="description">I made this cool UI design from "FrontendMentors.io". They have a lot
-                                    of cool challenges, so make sure you check them out.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <input class="carousel-open" type="radio" id="carousel-6" name="carousel2" aria-hidden="true"
-                        hidden="" />
-                    <div class="carousel-item">
-                        <div class="project-grid">
-                            <img src="assets/tindog.png" alt="tindog">
-                            <div class="text-left">
-                                <h3 class="title">TinDog</h3>
-                                <p class="description">I had a lot of fun building this website and it's basically
-                                    tinder for dogs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <label for="carousel-6" class="carousel-control prev control-4">‹</label>
-                    <label for="carousel-5" class="carousel-control next control-4">›</label>
-                    <label for="carousel-4" class="carousel-control prev control-5">‹</label>
-                    <label for="carousel-6" class="carousel-control next control-5">›</label>
-                    <label for="carousel-5" class="carousel-control prev control-6">‹</label>
-                    <label for="carousel-4" class="carousel-control next control-6">›</label>
-                    <ol class="carousel-indicators">
-                        <li>
-                            <label for="carousel-1" class="carousel-bullet">•</label>
-                        </li>
-                        <li>
-                            <label for="carousel-2" class="carousel-bullet">•</label>
-                        </li>
-                        <li>
-                            <label for="carousel-3" class="carousel-bullet">•</label>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Technology stack -->
-    <section class="white-section" id="tech">
-        <div class="container">
-            <h2 class="section-heading">Technology Stack</h2>
-            <div class="flex">
-                <div class="box">
-                    <img class="first" src="assets/mongodb.svg" alt="mongodb">
-                    <h3 class="title"> M</h3>
+                    <div class="form-control">
+                        <input type="radio" name="budget" id="budget">
+                        <label for="budget">&dollar;100K+</label>
+                    </div>
                 </div>
-                <div class="box">
-                    <img class="second" src="assets/expressjs.svg" alt="expressjs">
-                    <h3 class="title"> E</h3>
+                
+                <div class="form-control">
+                    <label for="adv">How did you hear about us?</label>
+                    <input type="text" id="adv" autocomplete="false" autocapitalize="false">
                 </div>
-                <div class="box">
-                    <img class="third" src="assets/react-icon.svg" alt="reactjs">
-                    <h3 class="title"> R</h3>
-                </div>
-                <div class="box">
-                    <img class="fourth" src="assets/node-js.svg" alt="nodejs">
-                    <h3 class="title"> N</h3>
-                </div>
-            </div>
+                <button type="submit" class="btn"> Submit</button>
+            </form>
         </div>
-    </section>
 
-    <!-- Contact Us -->
-    <section class="bg-primary daisies-bg" id="contact">
-        <div class="container-fluid">
-            <h2 class="section-heading">GET IN TOUCH</h2>
-            <h3>I'm currently available for freelance work</h3>
-            <p class="contact-me"> If you have a project that you want to get started, think you
-                need my help with something,then get in touch.</p>
-            <button class="btn mt-3">
-                <a class="message" href="mailto:oluyemisisoyemi@gmail.com"> Message Me</a>
-            </button>
+        <div class="w-50 w-100">
+            <img class="contact-img" src="assets/contact-us.jpg" alt="contact image">
         </div>
-    </section>
+    </div>
+
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
