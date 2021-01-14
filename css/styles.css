@@ -247,4 +247,9 @@ label {
   .w-100 {
     width: 100%;
   }
+
+  .card{
+      width: 80%
+  }
+
 }
