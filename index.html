@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOREMI DEO</title>
+    <title>Contact Solution</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Comfortaa:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -13,78 +16,83 @@
 </head>
 
 <body>
-    <div class="flex">
+    <div class=" container flex min-h-100vh position">
+        <div id="error-banner" class="error-banner">
+            Please fill all required fields
+        </div>
         <div class="contact-form w-50 w-100">
             <h1>Let's work together</h1>
             <p>Send us a message using the form, we'd love to hear from you and know how we can help you.</p>
-            <form action="/" method="get">
+            <form action="/" method="get" id="sign-up">
 
-                <div class="flex">
+                <div class="col-flex flex mb-0">
                     <div class="form-control pr-15 w-50 w-100">
                         <label for="firstName">First name</label>
-                        <input type="text" name="firstName" id="firstName" autocomplete="false" autocapitalize="false" required>
+                        <input type="text" name="firstName" id="firstName" autocomplete="false" autocapitalize="false">
                     </div>
 
                     <div class="form-control pl-15 w-50 w-100">
                         <label for="lastName">Last name</label>
-                        <input type="text" name="lastName" id="lastName" autocomplete="false" autocapitalize="false" required>
+                        <input type="text" name="lastName" id="lastName" autocomplete="false" autocapitalize="false">
                     </div>
                 </div>
 
                 <div class="form-control">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" autocomplete="false" autocapitalize="false" required>
+                    <input type="email" name="email" id="email" autocomplete="false" autocapitalize="false">
                 </div>
 
                 <div class="form-control">
                     <label for="company">Company</label>
-                    <input type="text" name="companyName" id="company" autocomplete="false" autocapitalize="false" required>
+                    <input type="text" name="companyName" id="company" autocomplete="false" autocapitalize="false">
                 </div>
 
                 <div class="form-control">
-                    <label class="flex" for="phone">
-                        <span>Phone</span> 
+                    <label class="label-flex flex" for="phone">
+                        <span>Phone</span>
                         <span class="muted">Optional</span>
                     </label>
                     <input type="text" name="phoneNumber" id="phone" autocomplete="false" autocapitalize="false">
                 </div>
 
                 <div class="form-control">
-                    <label class="flex" for="message">
-                        <span>How can we help you?</span> 
+                    <label class="label-flex flex" for="message">
+                        <span>How can we help you?</span>
                         <span class="muted">Max. 500 characters</span>
                     </label>
-                    <textarea name="msg" id="message" rows="6" required maxlength="500"></textarea>
+                    <textarea name="msg" id="message" rows="6" maxlength="500"></textarea>
                 </div>
 
                 <div class="budget">
                     <label>Expected budget</label>
                     <div class="form-control">
-                        <input type="radio" name="budget" id="budget">
+                        <input type="radio" name="budget" id="budget" value="Less than $25" default>
                         <label for="budget">Less than &dollar;25K</label>
                     </div>
 
                     <div class="form-control">
-                        <input type="radio" name="budget" id="budget">
+                        <input type="radio" name="budget" id="budget" value="$25-$50">
                         <label for="budget">&dollar;25K - &dollar;50K </label>
                     </div>
 
                     <div class="form-control">
-                        <input type="radio" name="budget" id="budget">
+                        <input type="radio" name="budget" id="budget" value="$50-$100">
                         <label for="budget">&dollar;50K - &dollar;100K</label>
                     </div>
 
                     <div class="form-control">
-                        <input type="radio" name="budget" id="budget">
+                        <input type="radio" name="budget" id="budget" value="$100+">
                         <label for="budget">&dollar;100K+</label>
                     </div>
                 </div>
-                
-                <div class="form-control">
+
+                <div class="form-control mt-30">
                     <label for="adv">How did you hear about us?</label>
-                    <input type="text" id="adv" autocomplete="false" autocapitalize="false">
+                    <input type="text" id="referral" autocomplete="false" autocapitalize="false">
                 </div>
-                <button type="submit" class="btn"> Submit</button>
+                <div class="flex">
+                    <button type="submit" class="btn ml-auto">Submit</button>
+                </div>
             </form>
         </div>
 

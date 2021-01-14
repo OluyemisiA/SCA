@@ -6,33 +6,77 @@
 
 body {
   font-family: "Montserrat";
-  font-size: 1em;
+  font-size: 1rem;
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   font-weight: 800;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 200;
   line-height: 1.4;
 }
 
 /* Utilities */
+.btn {
+  display: block;
+  background-color: slateblue;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 15px;
+}
+
+.btn:hover {
+  background-color: #000000bf;
+  box-shadow: 0 0 0 1px #000000bf;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-md {
+  padding: 10px 40px;
+}
 
 .flex {
   display: flex;
-  flex-direction: row;
 }
-form .flex .form-control {
+
+.label-flex {
+  justify-content: space-between;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.mb-0 {
   margin-bottom: 0;
 }
 
-.form-control .flex {
-  justify-content: space-between;
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .pl-15 {
@@ -47,34 +91,83 @@ form .flex .form-control {
   width: 50%;
 }
 
-/* Main */
-.btn {
-  display: block;
-  background-color: slateblue;
-  border: 1px solid transparent;
-  border-radius: 5px;
+.error-banner {
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 1px 5px 20px grey;
   color: #fff;
+  padding: 15px 40px;
+  position: fixed;
+  right: -500px;
+  top: 10px;
+  z-index: 20;
+  transition: right 0.3s ease-in;
+}
+
+.error-banner.show {
+  display: block;
   cursor: pointer;
-  margin: 10px;
-  outline: none;
-  padding: 10px 15px;
-  position: absolute;
-  right: 10%;
+  right: 10px;
+  transition: right 0.3s ease-out;
 }
 
-.btn:hover {
-  background-color: #000000bf;
-  box-shadow: 0 0 0 1px #000000bf;
-  transition: 0.3s ease-in-out;
+.position {
+  position: relative;
 }
 
+/* Thank you page */
+.bg {
+  background: linear-gradient(
+      rgba(213, 209, 233, 0.7) 0 10%,
+      rgba(255, 255, 255, 1)
+    ),
+    url("../assets/butterflies.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 300px;
+}
+
+.card {
+  background: linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.7) 0 5%
+  );
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 200px auto;
+  padding: 40px;
+  width: 40%;
+}
+
+.center {
+  text-align: center;
+}
+
+.checkmark {
+  border: 1px solid limegreen;
+  border-radius: 50%;
+  display: inline-block;
+  color: rgb(138, 236, 138);
+  font-size: 2rem;
+  margin-bottom: 5px;
+  height: 60px;
+  padding: 5px;
+  width: 60px;
+}
+
+/* Main */
 .budget {
   margin: 15px 0;
 }
 
+.budget input[type="radio"] {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+
 .contact-form {
-  padding: 3% 6% 10% 3%;
-  position: relative;
+  padding: 5% 8% 10% 3%;
 }
 
 .contact-form p {
@@ -97,6 +190,11 @@ form .flex .form-control {
   margin: 15px 0;
 }
 
+.control-error {
+  /* border: 1px solid rgba(248, 81, 81, 0.795)!important; */
+  box-shadow: 0 0 1px 0 rgba(248, 81, 81, 0.795);
+}
+
 .form-control input[type="text"],
 .form-control input[type="email"],
 .form-control textarea {
@@ -117,25 +215,25 @@ textarea:focus {
 label {
   color: #363535;
   font-family: "Comfortaa";
-   padding-bottom: 10px;
+  font-weight: bold;
 }
 
 .form-control .muted {
   color: #d1d5da;
   font-family: "Comfortaa";
-  font-size: medium;
+  font-size: 15px;
   text-align: right;
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-    /* Utilities */
-  .flex {
+  /* Utilities */
+  .container.flex {
     flex-direction: column-reverse;
     flex-wrap: wrap;
   }
 
-  form .flex {
+  .col-flex {
     flex-direction: column;
   }
 
@@ -149,54 +247,5 @@ label {
 
   .w-100 {
     width: 100%;
-  }
-
-  .contact-img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .btn {
-    margin: 0;
-    bottom: 0.5%;
-    right: 6%;
-  }
-}
-
-/* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-   /* Utilities */
-  .flex {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-  }
-
-  form .flex {
-    flex-direction: column;
-  }
-
-  .pl-15 {
-    padding-left: 0;
-  }
-
-  .pr-15 {
-    padding-right: 0;
-  }
-
-  .w-100 {
-    width: 100%;
-  }
-
-  .contact-img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .btn {
-    margin: 0;
-    bottom: 0.5%;
-    right: 6%;
   }
 }
