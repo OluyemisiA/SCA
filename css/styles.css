@@ -191,8 +191,7 @@ p {
 }
 
 .control-error {
-  /* border: 1px solid rgba(248, 81, 81, 0.795)!important; */
-  box-shadow: 0 0 1px 0 rgba(248, 81, 81, 0.795);
+  border: 1px solid rgba(248, 81, 81, 0.795)!important;
 }
 
 .form-control input[type="text"],
